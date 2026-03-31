@@ -1,0 +1,40 @@
+{
+  "name": "madebypapa",
+  "displayName": "Terminal Alerter",
+  "description": "Plays a sound on syntax errors",
+  "version": "0.0.1", 
+  "publisher": "papa",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+  "commands": [
+    {
+      "command": "madebypapa.testSound",
+      "title": "Test Sound"
+    },
+    
+    {
+      "command": "madebypapa.toggleMute",
+      "title": "Toggle Mute"
+    }
+  ]
+},
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "check-types": "tsc --noEmit",
+    "package": "node esbuild.js --minify"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.86.0",
+    "@types/node": "20.x",
+    "esbuild": "^0.20.1",
+    "typescript": "^5.3.3"
+  }
+}
