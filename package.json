@@ -4,6 +4,10 @@
   "description": "Plays a sound on syntax errors",
   "version": "0.0.1", 
   "publisher": "papa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pavanhatwar/vs-code-terminal-syntax-alerter.git"
+},
   "engines": {
     "vscode": "^1.86.0"
   },
